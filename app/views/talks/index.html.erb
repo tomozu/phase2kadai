@@ -1,0 +1,17 @@
+<div class="content">
+<h3>Talks index</h3>
+
+<p><%= notice %></p>
+
+<% @talks.each do |talk| %>
+  <p><%= talk.content %></p>
+  <div class="talk_links">
+   <%= link_to 'Show', talk_path(talk.id) , class: 'btn btn-success'%>
+   <%= link_to 'Edit', edit_talk_path(talk.id), data: { confirm:'本当に編集していいですか？' } , class: 'btn btn-warning'%>
+   <%= link_to 'Destroy', talk_path(talk.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-danger'%>
+  <% end %>
+  </div>
+  <div class="post_btn">
+   <%= link_to 'Talks new post !!', new_talk_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>

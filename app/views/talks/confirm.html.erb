@@ -1,0 +1,13 @@
+<h3>In the following content, to post..</h3>
+
+<%= form_with(model: @talk, url: talks_path, local: true) do |form| %>
+ <%= form.hidden_field :content %>
+ 
+ <p>talking on Kanamoritter: <%= @talk.content %></p>
+ <%= form.submit 'post' %>
+<% end %>
+
+<%= form_with(model: @talk, url: new_talk_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit 'back', name: 'back' %>
+<% end %>

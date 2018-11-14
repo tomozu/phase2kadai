@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Kanamoritter</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <body>
+    <header>
+      <ul>
+      <li><strong><%= link_to "Kanamoritter", root_path %></strong></li>
+      <li><%= link_to "Index", talks_path %></li>
+      <li><%= link_to "New post", new_talk_path %></li>
+      </ul>
+    </header>
+    
+    <section class="main-header">
+    <%= image_tag"IMG_1304.jpg", class:"image_area" %> 
+    </section>
+    
+    
+    <%= yield %>
+    
+    <footer>
+      <p> 2 0 1 8 June tomko kanamori</p>
+    </footer>
+    
+  </body>
+</html>
